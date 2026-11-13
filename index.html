@@ -18,7 +18,14 @@
   <div class="intro-inner">
     <h1 class="intro-title">للقدر رأي آخر</h1>
     <p class="intro-sub">حكاية صغيرة محدش يعرفها غيرنا</p>
-    <button class="btn btn-primary" id="startBtn" type="button">تعال نبدا حكايتنا</button>
+
+    <form class="intro-gate" id="introGate" autocomplete="off">
+      <input class="gate-input" id="gateInput" type="password" placeholder="اكتب كلمة السر" aria-label="كلمة السر">
+      <button class="btn btn-primary" type="submit">دخول</button>
+      <p class="gate-msg" id="gateMsg" hidden>كلمة السر مش صحيحة</p>
+    </form>
+
+    <button class="btn btn-primary" id="startBtn" type="button" hidden>تعال نبدا حكايتنا</button>
   </div>
 </section>
 

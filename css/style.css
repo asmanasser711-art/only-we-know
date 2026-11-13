@@ -182,6 +182,37 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height
 
 .intro .btn { animation: fadeUp 1.2s .4s ease both; }
 
+/* ---------- بوابة كلمة السر في شاشة البداية ---------- */
+.intro-gate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .9rem;
+  animation: fadeUp 1.2s .4s ease both;
+}
+
+.gate-input {
+  width: min(260px, 78vw);
+  padding: .75rem 1.1rem;
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  text-align: center;
+  color: var(--beige);
+  background: rgba(242, 230, 205, .06);
+  border: 1px solid rgba(201, 162, 75, .45);
+  border-radius: 60px;
+  outline: none;
+  transition: border-color .3s, box-shadow .3s;
+}
+.gate-input::placeholder { color: rgba(154, 123, 63, .9); }
+.gate-input:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201, 162, 75, .18); }
+
+.gate-msg {
+  margin: 0;
+  font-size: .9rem;
+  color: var(--gold-light);
+}
+
 @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
 
 /* ---------- Navbar ---------- */

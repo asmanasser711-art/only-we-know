@@ -14,6 +14,26 @@
   var site  = $('#site');
   var startBtn = $('#startBtn');
 
+  /* كلمة السر للدخول للموقع */
+  var SITE_PASSWORD = 'بطريق';
+  var introGate = $('#introGate');
+  var gateInput = $('#gateInput');
+  var gateMsg = $('#gateMsg');
+
+  introGate.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    if (gateInput.value.trim() === SITE_PASSWORD) {
+      introGate.hidden = true;
+      gateMsg.hidden = true;
+      startBtn.hidden = false;
+      startBtn.focus();
+    } else {
+      gateMsg.hidden = false;
+      gateInput.value = '';
+      gateInput.focus();
+    }
+  });
+
   startBtn.addEventListener('click', function () {
     intro.classList.add('is-leaving');
     site.hidden = false;
